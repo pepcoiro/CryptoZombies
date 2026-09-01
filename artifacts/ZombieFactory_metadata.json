@@ -1,0 +1,217 @@
+{
+	"compiler": {
+		"version": "0.4.25+commit.59dbf8f1"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombies",
+				"outputs": [
+					{
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"name": "dna",
+						"type": "uint256"
+					},
+					{
+						"name": "level",
+						"type": "uint32"
+					},
+					{
+						"name": "readyTime",
+						"type": "uint32"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "zombieToOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "renounceOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_name",
+						"type": "string"
+					}
+				],
+				"name": "createRandomZombie",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "owner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "address"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [],
+				"name": "isOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "transferOwnership",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"name": "zombieId",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"name": "name",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"name": "dna",
+						"type": "uint256"
+					}
+				],
+				"name": "NewZombie",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": true,
+						"name": "previousOwner",
+						"type": "address"
+					},
+					{
+						"indexed": true,
+						"name": "newOwner",
+						"type": "address"
+					}
+				],
+				"name": "OwnershipTransferred",
+				"type": "event"
+			}
+		],
+		"devdoc": {
+			"methods": {
+				"isOwner()": {
+					"return": "vero se `msg.sender` è il proprietario del contratto.\r"
+				},
+				"owner()": {
+					"return": "l'indirizzo del proprietario.\r"
+				},
+				"renounceOwnership()": {
+					"details": "Consente all'attuale proprietario di rinunciare al controllo del contratto.\r"
+				},
+				"transferOwnership(address)": {
+					"details": "Consente all'attuale proprietario di trasferire il controllo del contratto a un nuovo proprietario.\r",
+					"params": {
+						"newOwner": "L'indirizzo a cui trasferire la proprietà.\r"
+					}
+				}
+			}
+		},
+		"userdoc": {
+			"methods": {
+				"renounceOwnership()": {
+					"notice": "La rinuncia alla proprietà lascerà il contratto senza un proprietario\r Non sarà più possibile chiamare le funzioni con il modificatore `onlyOwner`.\r"
+				}
+			}
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"zombiefactory.sol": "ZombieFactory"
+		},
+		"evmVersion": "byzantium",
+		"libraries": {},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"ownable.sol": {
+			"keccak256": "0x4bb062ce3d763f858b36d38ff15531719f2b317c003532379bab7f70d7444ad0",
+			"urls": [
+				"bzzr://d30815a7c0cb54ac958d75c42386c47e8e6fb23d27dcd2c8abc86b0b632d0051"
+			]
+		},
+		"zombiefactory.sol": {
+			"keccak256": "0xa93b12204c6e875af2a6185d376124b6d7ab028de324bda0992de5a02493a982",
+			"urls": [
+				"bzzr://5192e257ed5ae2a6d8b62ad810c81cbcecc654277b9996edf0f773527aacd5de"
+			]
+		}
+	},
+	"version": 1
+}
