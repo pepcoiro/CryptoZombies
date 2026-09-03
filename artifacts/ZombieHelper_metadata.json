@@ -11,6 +11,20 @@
 					{
 						"name": "_zombieId",
 						"type": "uint256"
+					}
+				],
+				"name": "levelUp",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
 					},
 					{
 						"name": "_kittyId",
@@ -48,10 +62,27 @@
 					{
 						"name": "readyTime",
 						"type": "uint32"
+					},
+					{
+						"name": "winCount",
+						"type": "uint16"
+					},
+					{
+						"name": "lossCount",
+						"type": "uint16"
 					}
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -126,28 +157,6 @@
 			},
 			{
 				"constant": false,
-				"inputs": [
-					{
-						"name": "_zombieId",
-						"type": "uint256"
-					},
-					{
-						"name": "_targetDna",
-						"type": "uint256"
-					},
-					{
-						"name": "_species",
-						"type": "string"
-					}
-				],
-				"name": "feedAndMultiply",
-				"outputs": [],
-				"payable": false,
-				"stateMutability": "nonpayable",
-				"type": "function"
-			},
-			{
-				"constant": false,
 				"inputs": [],
 				"name": "renounceOwnership",
 				"outputs": [],
@@ -210,6 +219,20 @@
 					}
 				],
 				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_fee",
+						"type": "uint256"
+					}
+				],
+				"name": "setLevelUpFee",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -316,21 +339,21 @@
 			]
 		},
 		"zombiefactory.sol": {
-			"keccak256": "0xa93b12204c6e875af2a6185d376124b6d7ab028de324bda0992de5a02493a982",
+			"keccak256": "0xcdf8ae8bc9714a055e60c3848173fe517530c3af463d73ad904d848bac4464b9",
 			"urls": [
-				"bzzr://5192e257ed5ae2a6d8b62ad810c81cbcecc654277b9996edf0f773527aacd5de"
+				"bzzr://c915f8c2cfdbe47ea5c6eef6421b4f9cb6b2b90c9041dd919791115f191460d1"
 			]
 		},
 		"zombiefeeding.sol": {
-			"keccak256": "0x77d463963fc674c67155e550888b33a3fbbf4e7486df2fbd9dec44d9f40c9132",
+			"keccak256": "0x653d79e4f2347016bac56896530bd20ccb8859ff0bac6fe811895defd67512e5",
 			"urls": [
-				"bzzr://1ed95f45d342f997db5c12704d24e289343e02df4e21f8131a6ac04b6e1eca70"
+				"bzzr://7ee42683550f4c912dea56c3e6ec23ba1a2a5664dbd13f31077efd3dd8ed7f4c"
 			]
 		},
 		"zombiehelper.sol": {
-			"keccak256": "0xd4a1771411fc030745653988ddae005bd078218c1caf8587a7cbf5ee196a7840",
+			"keccak256": "0xf55eab48f4c47ad56eb9d692edc35e4818942191fda728bfebfd0d8c100d678f",
 			"urls": [
-				"bzzr://d00d5e3e119dda3b966a05d08efa5304735dc63058d8d8a3ca98ad95c5b15e69"
+				"bzzr://ca134630a5f53f9a4b039efecdbd3ba25fc0941ed6979210848ad8fbf954c050"
 			]
 		}
 	},

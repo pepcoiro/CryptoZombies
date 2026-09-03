@@ -11,6 +11,20 @@
 					{
 						"name": "_zombieId",
 						"type": "uint256"
+					}
+				],
+				"name": "levelUp",
+				"outputs": [],
+				"payable": true,
+				"stateMutability": "payable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
 					},
 					{
 						"name": "_kittyId",
@@ -63,6 +77,34 @@
 				"type": "function"
 			},
 			{
+				"constant": false,
+				"inputs": [],
+				"name": "withdraw",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": true,
+				"inputs": [
+					{
+						"name": "_owner",
+						"type": "address"
+					}
+				],
+				"name": "getZombiesByOwner",
+				"outputs": [
+					{
+						"name": "",
+						"type": "uint256[]"
+					}
+				],
+				"payable": false,
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
 				"constant": true,
 				"inputs": [
 					{
@@ -90,6 +132,24 @@
 					}
 				],
 				"name": "setKittyContractAddress",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newDna",
+						"type": "uint256"
+					}
+				],
+				"name": "changeDna",
 				"outputs": [],
 				"payable": false,
 				"stateMutability": "nonpayable",
@@ -144,6 +204,56 @@
 				],
 				"payable": false,
 				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_newName",
+						"type": "string"
+					}
+				],
+				"name": "changeName",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_fee",
+						"type": "uint256"
+					}
+				],
+				"name": "setLevelUpFee",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"constant": false,
+				"inputs": [
+					{
+						"name": "_zombieId",
+						"type": "uint256"
+					},
+					{
+						"name": "_targetId",
+						"type": "uint256"
+					}
+				],
+				"name": "attack",
+				"outputs": [],
+				"payable": false,
+				"stateMutability": "nonpayable",
 				"type": "function"
 			},
 			{
@@ -229,7 +339,7 @@
 	},
 	"settings": {
 		"compilationTarget": {
-			"zombiefeeding.sol": "ZombieFeeding"
+			"zombieattack.sol": "ZombieAttack"
 		},
 		"evmVersion": "byzantium",
 		"libraries": {},
@@ -246,6 +356,12 @@
 				"bzzr://d30815a7c0cb54ac958d75c42386c47e8e6fb23d27dcd2c8abc86b0b632d0051"
 			]
 		},
+		"zombieattack.sol": {
+			"keccak256": "0x349d4f372a6828cf6296678572b4517fce0f17e09b01eeb3be14ef2992a6bbcf",
+			"urls": [
+				"bzzr://9ff5eb9196b39e750f42fdd6a7791c4bea23202a87590c6a70f541854c7ca5bf"
+			]
+		},
 		"zombiefactory.sol": {
 			"keccak256": "0xcdf8ae8bc9714a055e60c3848173fe517530c3af463d73ad904d848bac4464b9",
 			"urls": [
@@ -256,6 +372,12 @@
 			"keccak256": "0x653d79e4f2347016bac56896530bd20ccb8859ff0bac6fe811895defd67512e5",
 			"urls": [
 				"bzzr://7ee42683550f4c912dea56c3e6ec23ba1a2a5664dbd13f31077efd3dd8ed7f4c"
+			]
+		},
+		"zombiehelper.sol": {
+			"keccak256": "0xf55eab48f4c47ad56eb9d692edc35e4818942191fda728bfebfd0d8c100d678f",
+			"urls": [
+				"bzzr://ca134630a5f53f9a4b039efecdbd3ba25fc0941ed6979210848ad8fbf954c050"
 			]
 		}
 	},
